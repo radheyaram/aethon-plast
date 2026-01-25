@@ -82,13 +82,10 @@
 
 /* Specific styling for the logo in footer if needed */
 .footer-logo {
-    font-family: var(--font-heading);
-    font-size: 2rem;
-    color: white;
+    display: inline-block;
     margin-bottom: 1rem;
-    display: block;
 }
 
-.footer-logo span {
-    color: var(--primary-color);
+.footer-logo img {
+    filter: brightness(0) invert(1);
 }

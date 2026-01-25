@@ -3,44 +3,12 @@ import './Pages.css';
 import { Factory, Utensils, Home, Briefcase, ShoppingBag, Droplets } from 'lucide-react';
 
 const WhomWeServe = () => {
-    const industries = [
-        {
-            id: 1,
-            title: 'Beverages',
-            icon: <Utensils size={40} />,
-            description: 'Providing high-quality PET bottles for mineral water, juices, and carbonated drinks. Our bottles ensure freshness and durability.',
-        },
-        {
-            id: 2,
-            title: 'Pharmaceuticals',
-            icon: <Droplets size={40} />,
-            description: 'Safe and sterile packaging solutions for liquid medicines, syrups, and healthcare products, meeting strict hygiene standards.',
-        },
-        {
-            id: 3,
-            title: 'Home Care',
-            icon: <Home size={40} />,
-            description: 'Durable containers for cleaning agents, detergents, and disinfectants. Designed to withstand chemical properties.',
-        },
-        {
-            id: 4,
-            title: 'Personal Care',
-            icon: <ShoppingBag size={40} />,
-            description: 'Aesthetic and functional packaging for shampoos, lotions, and oils that enhance shelf appeal.',
-        },
-        {
-            id: 5,
-            title: 'Industrial',
-            icon: <Factory size={40} />,
-            description: 'Robust packaging solutions for industrial lubricants, oils, and chemicals requiring high strength and resistance.',
-        },
-        {
-            id: 6,
-            title: 'Corporate Clients',
-            icon: <Briefcase size={40} />,
-            description: 'Customized branding and bulk packaging solutions for corporate events and promotional needs.',
-        }
-    ];
+    const industries = [{
+        id: 1,
+        title: 'Pharmaceuticals',
+        icon: <Droplets size={40} />,
+        description: 'Safe and sterile packaging solutions for liquid medicines, syrups, and healthcare products, meeting strict hygiene standards.',
+    }];
 
     return (
         <div className="whom-we-serve-page">

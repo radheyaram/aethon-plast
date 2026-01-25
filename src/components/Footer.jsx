@@ -8,7 +8,9 @@ const Footer = () => {
         <footer className="footer">
             <div className="container footer-content">
                 <div className="footer-section">
-                    <Link to="/" className="footer-logo">Aethon<span>Plast</span></Link>
+                    <Link to="/" className="footer-logo">
+                        <img src="/transperent aethon.png" alt="Aethon Plast" style={{ height: '60px', width: 'auto' }} />
+                    </Link>
                     <p>
                         Leading manufacturer of high-quality plastic packaging solutions. We serve industries globally with innovation and integrity.
                     </p>

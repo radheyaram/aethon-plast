@@ -6,10 +6,12 @@ import About from './pages/About';
 import Products from './pages/Products';
 import WhomWeServe from './pages/WhomWeServe';
 import Contact from './pages/Contact';
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <div className="app">
         <Navbar />
         <main>

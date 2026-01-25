@@ -24,7 +24,6 @@ const Navbar = () => {
           <li><NavLink to="/about">ABOUT</NavLink></li>
           <li><NavLink to="/products">PRODUCTS</NavLink></li>
           <li><NavLink to="/whom-we-serve">WHOM WE SERVE</NavLink></li>
-          {/* Reference has a dropdown here usually, simplified for now */}
           <li><NavLink to="/contact">CONTACT</NavLink></li>
         </ul>
       </div>

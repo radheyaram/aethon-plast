@@ -30,7 +30,7 @@ const Contact = () => {
                                 <MapPin size={24} />
                                 <div>
                                     <h4>Headquarters</h4>
-                                    <p>Aethon Plast Pvt Ltd<br />Plot No 123, Industrial Park<br />Hyderabad, Telangana 500001</p>
+                                    <p>AGM Chambers, 390/A, 446/15/E, <br />Sai Colony, R.C Puram, Sangareddy District, 502032, Telangana</p>
                                 </div>
                             </div>
 
@@ -38,8 +38,7 @@ const Contact = () => {
                                 <Phone size={24} />
                                 <div>
                                     <h4>Phone</h4>
-                                    <p>+91 98765 43210</p>
-                                    <p>+91 40 1234 5678</p>
+                                    <p>9000386555</p>
                                 </div>
                             </div>
 
@@ -47,7 +46,6 @@ const Contact = () => {
                                 <Mail size={24} />
                                 <div>
                                     <h4>Email</h4>
-                                    <p>sales@aethonplast.com</p>
                                     <p>info@aethonplast.com</p>
                                 </div>
                             </div>

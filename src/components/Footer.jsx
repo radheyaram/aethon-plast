@@ -35,11 +35,11 @@ const Footer = () => {
                     <ul className="footer-links">
                         <li style={{ display: 'flex', gap: '10px' }}>
                             <MapPin size={20} className="text-primary" />
-                            <span>123 Industrial Area, Phase 2, <br />New Delhi, India - 110020</span>
+                            <span>AGM Chambers, 390/A, 446/15/E, <br />Sai Colony, R.C Puram, Sangareddy District, 502032, Telangana</span>
                         </li>
                         <li style={{ display: 'flex', gap: '10px' }}>
                             <Phone size={20} className="text-primary" />
-                            <span>+91 98765 43210</span>
+                            <span>9000386555</span>
                         </li>
                         <li style={{ display: 'flex', gap: '10px' }}>
                             <Mail size={20} className="text-primary" />

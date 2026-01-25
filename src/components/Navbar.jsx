@@ -13,8 +13,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="container nav-content">
         <Link to="/" className="logo">
-          {/* Logo Icon or Image could go here if available */}
-          Aethon<span>Plast</span>
+          <img src="/transperent aethon.png" alt="Aethon Plast" />
         </Link>
         <div className="mobile-toggle" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={28} /> : <Menu size={28} />}

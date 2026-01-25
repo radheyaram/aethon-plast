@@ -63,11 +63,11 @@ const Home = () => {
                     </div>
                     <div className="about-stats">
                         <div className="stat-item">
-                            <h4>1M+</h4>
+                            <h4>0+</h4>
                             <p>Units/Month</p>
                         </div>
                         <div className="stat-item">
-                            <h4>500+</h4>
+                            <h4>0+</h4>
                             <p>Clients</p>
                         </div>
                     </div>

@@ -1,7 +1,7 @@
 /* Products Page Styles */
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
     gap: 2rem;
     padding-bottom: var(--spacing-xl);
 }
@@ -17,8 +17,8 @@
     flex-direction: column;
     height: 100%;
     /* Ensure equal height */
-    min-height: 480px;
-    /* Increased min-height */
+    min-height: 400px;
+    /* Reduced min-height */
 }
 
 .product-card:hover {
@@ -64,4 +64,15 @@
     color: var(--text-secondary);
     font-size: 0.95rem;
     flex: 1;
+}
+
+@media (max-width: 480px) {
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .product-card {
+        min-height: auto;
+    }
 }

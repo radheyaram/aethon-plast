@@ -1,5 +1,5 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Linkedin, Instagram, Facebook } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import './Navbar.css';
 
@@ -22,8 +22,8 @@ const Navbar = () => {
           <li><NavLink to="/" end>HOME</NavLink></li>
           <li><NavLink to="/about">ABOUT</NavLink></li>
           <li><NavLink to="/products">PRODUCTS</NavLink></li>
-          <li><NavLink to="/whom-we-serve">WHOM WE SERVE</NavLink></li>
-          <li><NavLink to="/contact">CONTACT</NavLink></li>
+          <li><NavLink to="/our-segments">OUR SEGMENTS</NavLink></li>
+          <li><NavLink to="/contact" className="nav-btn-highlight">CONTACT US</NavLink></li>
         </ul>
       </div>
     </nav>

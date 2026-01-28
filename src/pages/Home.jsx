@@ -1,32 +1,88 @@
+import { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle, Package, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import heroBg from '../assets/hero-bg.png';
+import bannerBottles from '../assets/pharma_banner_bottles_1769614352905.png'; // Update with actual filename from list_dir
+import bannerProduction from '../assets/pharma_banner_production_retry_1769615616299.png'; // Update with actual filename
+import bannerCaps from '../assets/pharma_banner_caps_retry_1769615514861.png'; // Update with actual filename
 import './Home.css';
 
 const Home = () => {
+    const slides = [
+        {
+            id: 1,
+            image: bannerBottles,
+            title: "Your Trusted Partner in",
+            subtitle: "Plastic Packaging Excellence",
+            text: "Delivering premium quality pharmaceutical, cosmetic, and FMCG packaging solutions to international standards."
+        },
+        {
+            id: 2,
+            image: bannerProduction,
+            title: "Advanced Manufacturing",
+            subtitle: "State-of-the-Art Technology",
+            text: "Precision engineering and clean-room molding facilities ensuring the highest hygiene standards."
+        },
+        {
+            id: 3,
+            image: bannerCaps,
+            title: "Innovative Solutions",
+            subtitle: "Custom Caps & Closures",
+            text: "Tailored designs to enhance your brand identity and ensure product safety."
+        }
+    ];
+
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    // Auto-slide effect
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentSlide((prev) => (prev + 1) % slides.length);
+        }, 5000);
+        return () => clearInterval(interval);
+    }, [slides.length]);
+
+    const nextSlide = () => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+    };
+
+    const prevSlide = () => {
+        setCurrentSlide((prev) => (prev === 0 ? slides.length - 1 : prev - 1));
+    };
+
     return (
         <div className="home-page">
-            {/* Hero Section */}
-            <section className="hero" style={{ backgroundImage: `url(${heroBg})` }}>
+            {/* Hero Slider Section */}
+            <section className="hero" style={{ backgroundImage: `url(${slides[currentSlide].image})` }}>
                 <div className="hero-overlay"></div>
 
-                {/* Decorative Arrows */}
-                <div className="hero-arrow hero-prev">
+                {/* Navigation Arrows */}
+                <div className="hero-arrow hero-prev" onClick={prevSlide}>
                     <ChevronLeft size={30} />
                 </div>
-                <div className="hero-arrow hero-next">
+                <div className="hero-arrow hero-next" onClick={nextSlide}>
                     <ChevronRight size={30} />
                 </div>
 
-                <div className="container hero-content">
-                    <h1>Your Trusted Partner in</h1>
-                    <span className="hero-title-sub">Plastic Packaging Excellence</span>
+                <div className="container hero-content fade-in-up">
+                    <h1>{slides[currentSlide].title}</h1>
+                    <span className="hero-title-sub">{slides[currentSlide].subtitle}</span>
 
-                    <p>Delivering premium quality pharmaceutical, cosmetic, and FMCG packaging solutions to international standards with reliability and commitment into plastic molding.</p>
+                    <p>{slides[currentSlide].text}</p>
 
                     <div className="hero-btns">
                         <Link to="/products" className="btn btn-cta">Explore Our Products</Link>
                     </div>
+                </div>
+
+                {/* Slider Indicators */}
+                <div className="slider-dots">
+                    {slides.map((slide, index) => (
+                        <div
+                            key={slide.id}
+                            className={`slider-dot ${index === currentSlide ? 'active' : ''}`}
+                            onClick={() => setCurrentSlide(index)}
+                        ></div>
+                    ))}
                 </div>
             </section>
 

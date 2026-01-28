@@ -4,7 +4,8 @@ import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
 import Products from './pages/Products';
-import WhomWeServe from './pages/WhomWeServe';
+import ProductList from './pages/ProductList';
+import OurSegments from './pages/OurSegments';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import ErrorBoundary from './components/ErrorBoundary';
@@ -21,7 +22,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
               <Route path="/products" element={<Products />} />
-              <Route path="/whom-we-serve" element={<WhomWeServe />} />
+              <Route path="/products/:id" element={<ProductList />} />
+              <Route path="/our-segments" element={<OurSegments />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </main>

@@ -1,6 +1,7 @@
-import React from 'react';
-import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook, Twitter } from 'lucide-react';
+
+import { Phone, Mail, MapPin, Instagram, Linkedin, Facebook } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { CONTACT_INFO, SOCIAL_LINKS, NAV_LINKS } from '../utils/constants';
 import './Footer.css';
 
 const Footer = () => {
@@ -15,20 +16,18 @@ const Footer = () => {
                         Leading manufacturer of high-quality plastic packaging solutions. We serve industries globally with innovation and integrity.
                     </p>
                     <div className="social-links">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="social-icon"><Facebook size={18} /></a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="social-icon"><Instagram size={18} /></a>
-                        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="social-icon"><Linkedin size={18} /></a>
+                        <a href={SOCIAL_LINKS.FACEBOOK} target="_blank" rel="noopener noreferrer" className="social-icon"><Facebook size={18} /></a>
+                        <a href={SOCIAL_LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer" className="social-icon"><Instagram size={18} /></a>
+                        <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noopener noreferrer" className="social-icon"><Linkedin size={18} /></a>
                     </div>
                 </div>
 
                 <div className="footer-section">
                     <h3>Quick Links</h3>
                     <ul className="footer-links">
-                        <li><Link to="/">Home</Link></li>
-                        <li><Link to="/about">About Us</Link></li>
-                        <li><Link to="/products">Our Products</Link></li>
-                        <li><Link to="/our-segments">Our Segments</Link></li>
-                        <li><Link to="/contact">Contact Us</Link></li>
+                        {NAV_LINKS.map(link => (
+                            <li key={link.name}><Link to={link.path}>{link.name}</Link></li>
+                        ))}
                     </ul>
                 </div>
 
@@ -38,21 +37,21 @@ const Footer = () => {
                         <li style={{ display: 'flex', gap: '10px' }}>
                             <MapPin size={24} className="text-primary" />
                             <a
-                                href="https://www.google.com/maps/search/?api=1&query=AGM+Chambers,+390/A,+446/15/E,+Sai+Colony,+R.C+Puram,+Sangareddy+District,+502032,+Telangana"
+                                href={CONTACT_INFO.MAP_LINK}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 style={{ color: 'inherit', textDecoration: 'none' }}
                             >
-                                AGM Chambers, 390/A, 446/15/E, <br />Sai Colony, R.C Puram, Sangareddy District, 502032, Telangana
+                                {CONTACT_INFO.ADDRESS}
                             </a>
                         </li>
                         <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                             <Phone size={20} className="text-primary" />
-                            <a href="tel:+919000386555" style={{ color: 'inherit', textDecoration: 'none' }}>9000386555</a>
+                            <a href={`tel:${CONTACT_INFO.PHONE}`} style={{ color: 'inherit', textDecoration: 'none' }}>{CONTACT_INFO.PHONE}</a>
                         </li>
                         <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
                             <Mail size={20} className="text-primary" />
-                            <a href="mailto:info@aethonplast.com" style={{ color: 'inherit', textDecoration: 'none' }}>info@aethonplast.com</a>
+                            <a href={`mailto:${CONTACT_INFO.EMAIL}`} style={{ color: 'inherit', textDecoration: 'none' }}>{CONTACT_INFO.EMAIL}</a>
                         </li>
                     </ul>
                 </div>

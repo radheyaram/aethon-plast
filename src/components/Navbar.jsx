@@ -1,6 +1,7 @@
 import { Link, NavLink, useLocation } from 'react-router-dom';
-import { Menu, X, Linkedin, Instagram, Facebook } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { NAV_LINKS } from '../utils/constants';
 import './Navbar.css';
 
 const Navbar = () => {
@@ -19,11 +20,17 @@ const Navbar = () => {
           {isOpen ? <X size={28} /> : <Menu size={28} />}
         </div>
         <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-          <li><NavLink to="/" end>HOME</NavLink></li>
-          <li><NavLink to="/about">ABOUT</NavLink></li>
-          <li><NavLink to="/products">PRODUCTS</NavLink></li>
-          <li><NavLink to="/our-segments">OUR SEGMENTS</NavLink></li>
-          <li><NavLink to="/contact" className="nav-btn-highlight">CONTACT US</NavLink></li>
+          {NAV_LINKS.map((link) => (
+            <li key={link.name}>
+              <NavLink
+                to={link.path}
+                className={link.name === 'Contact Us' ? 'nav-btn-highlight' : ''}
+                end={link.path === '/'}
+              >
+                {link.name.toUpperCase()}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

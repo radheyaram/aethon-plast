@@ -7,13 +7,10 @@
 
 .product-list-header {
     background: linear-gradient(135deg, #0F4C81 0%, #082d4f 100%);
-    /* Deep Pharma Blue Gradient */
     padding: 32px 0;
-    /* Reduced height as requested */
     border-bottom: none;
     margin-bottom: 40px;
     color: white;
-    /* Default text color */
 }
 
 .product-list-header h1 {
@@ -32,7 +29,7 @@
     max-width: 600px;
 }
 
-.breadcrumb-nav {
+.product-list-header .breadcrumb-nav {
     display: flex;
     align-items: center;
     gap: 8px;
@@ -42,41 +39,39 @@
     margin-bottom: 12px;
 }
 
-.breadcrumb-link {
+.product-list-header .breadcrumb-link {
     color: rgba(255, 255, 255, 0.8);
     text-decoration: none;
     transition: color 0.2s;
 }
 
-.breadcrumb-link:hover {
+.product-list-header .breadcrumb-link:hover {
     color: #fff;
     /* White on hover */
     text-decoration: underline;
 }
 
-.breadcrumb-separator {
+.product-list-header .breadcrumb-separator {
     color: rgba(255, 255, 255, 0.5);
 }
 
-.breadcrumb-current {
+.product-list-header .breadcrumb-current {
     font-weight: 600;
     color: #fff;
 }
 
 .product-list-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    /* Enforce 3 columns */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
 }
 
 .detail-card {
     background: white;
+    background: white;
     border-radius: 12px;
-    /* Rounded corners */
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-    /* Soft, professional shadow */
     transition: transform 0.2s, box-shadow 0.2s;
     border: 1px solid #f0f0f0;
 }

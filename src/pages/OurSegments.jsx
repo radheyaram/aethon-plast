@@ -1,9 +1,9 @@
-import React from 'react';
+
 import { Pill, Leaf, Sparkles, ShoppingBag } from 'lucide-react';
-import pharmaImg from '../assets/segment_pharma_1769615897321.png'; // Update with actual filename
-import nutraImg from '../assets/segment_nutra_1769616067190.png'; // Update with actual filename
-import cosmeticImg from '../assets/pharma_banner_bottles_1769614352905.png'; // Fallback
-import fmcgImg from '../assets/pharma_banner_production_retry_1769615616299.png'; // Fallback
+const pharmaImg = '/assets/segment_pharma_1769615897321.png';
+const nutraImg = '/assets/segment_nutra_1769616067190.png';
+const cosmeticImg = '/assets/pharma_banner_bottles_1769614352905.png';
+const fmcgImg = '/assets/pharma_banner_production_retry_1769615616299.png';
 import { useEffect, useRef } from 'react';
 import './OurSegments.css';
 
@@ -16,12 +16,12 @@ const OurSegments = () => {
                 entries.forEach((entry) => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
-                        observer.unobserve(entry.target); // Run animation once
+                        observer.unobserve(entry.target);
                     }
                 });
             },
             {
-                threshold: 0.2, // Trigger when 20% visible
+                threshold: 0.2,
                 rootMargin: '0px'
             }
         );

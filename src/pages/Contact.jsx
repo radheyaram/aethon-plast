@@ -1,4 +1,5 @@
 import { MapPin, Phone, Mail, Send } from 'lucide-react';
+import { CONTACT_INFO, CONTACT_SUBJECTS } from '../utils/constants';
 import './Pages.css';
 import './Contact.css';
 
@@ -30,7 +31,7 @@ const Contact = () => {
                                 <MapPin size={24} />
                                 <div>
                                     <h4>Headquarters</h4>
-                                    <p>AGM Chambers, 390/A, 446/15/E, <br />Sai Colony, R.C Puram, Sangareddy District, 502032, Telangana</p>
+                                    <p>{CONTACT_INFO.ADDRESS}</p>
                                 </div>
                             </div>
 
@@ -38,7 +39,7 @@ const Contact = () => {
                                 <Phone size={24} />
                                 <div>
                                     <h4>Phone</h4>
-                                    <p>9000386555</p>
+                                    <p>{CONTACT_INFO.PHONE}</p>
                                 </div>
                             </div>
 
@@ -46,7 +47,7 @@ const Contact = () => {
                                 <Mail size={24} />
                                 <div>
                                     <h4>Email</h4>
-                                    <p>info@aethonplast.com</p>
+                                    <p>{CONTACT_INFO.EMAIL}</p>
                                 </div>
                             </div>
                         </div>
@@ -64,10 +65,9 @@ const Contact = () => {
                                 <div className="form-group">
                                     <label>Subject</label>
                                     <select className="form-control">
-                                        <option>Product Inquiry</option>
-                                        <option>Custom Mold Request</option>
-                                        <option>Partnership</option>
-                                        <option>Other</option>
+                                        {CONTACT_SUBJECTS.map(subject => (
+                                            <option key={subject}>{subject}</option>
+                                        ))}
                                     </select>
                                 </div>
                                 <div className="form-group">

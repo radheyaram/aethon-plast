@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
 import { ArrowRight, CheckCircle, Package, ShieldCheck, ChevronLeft, ChevronRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
-import bannerBottles from '../assets/pharma_banner_bottles_1769614352905.png'; // Update with actual filename from list_dir
-import bannerProduction from '../assets/pharma_banner_production_retry_1769615616299.png'; // Update with actual filename
-import bannerCaps from '../assets/pharma_banner_caps_retry_1769615514861.png'; // Update with actual filename
+const bannerBottles = '/assets/pharma_banner_bottles_1769614352905.png';
+const bannerProduction = '/assets/pharma_banner_production_retry_1769615616299.png';
+const bannerCaps = '/assets/pharma_banner_caps_retry_1769615514861.png';
 import './Home.css';
 
 const Home = () => {
@@ -51,11 +51,9 @@ const Home = () => {
 
     return (
         <div className="home-page">
-            {/* Hero Slider Section */}
             <section className="hero" style={{ backgroundImage: `url(${slides[currentSlide].image})` }}>
                 <div className="hero-overlay"></div>
 
-                {/* Navigation Arrows */}
                 <div className="hero-arrow hero-prev" onClick={prevSlide}>
                     <ChevronLeft size={30} />
                 </div>
@@ -74,7 +72,6 @@ const Home = () => {
                     </div>
                 </div>
 
-                {/* Slider Indicators */}
                 <div className="slider-dots">
                     {slides.map((slide, index) => (
                         <div
@@ -86,7 +83,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Features Section */}
             <section className="section features-section">
                 <div className="container">
                     <div className="feature-grid">
@@ -109,7 +105,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* About Preview */}
             <section className="section bg-light">
                 <div className="container about-preview">
                     <div className="about-text">

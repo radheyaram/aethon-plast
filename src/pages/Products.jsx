@@ -1,10 +1,9 @@
-import React from 'react';
+
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import bottleImg from '../assets/product_bottle_iso_1769615333186.png'; // Update with actual filename
-import capImg from '../assets/product_cap_iso_1769615408540.png'; // Update with actual filename
-// Reusing cap image for closure placeholder since generation failed
-import closureImg from '../assets/product_cap_iso_1769615408540.png';
+const bottleImg = '/assets/group_bottles.png';
+const capImg = '/assets/group_caps.png';
+const closureImg = '/assets/group_closures.png';
 import './Products.css';
 
 const Products = () => {

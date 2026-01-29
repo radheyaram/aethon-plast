@@ -1,124 +1,288 @@
+/* ProductList.css */
 .product-list-page {
     padding-bottom: 80px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
 }
 
 .product-list-header {
-    background: linear-gradient(135deg, var(--secondary-color) 0%, #1e293b 100%);
+    background: linear-gradient(135deg, #0F4C81 0%, #082d4f 100%);
+    /* Deep Pharma Blue Gradient */
+    padding: 32px 0;
+    /* Reduced height as requested */
+    border-bottom: none;
+    margin-bottom: 40px;
     color: white;
-    padding: 60px 0;
-    margin-bottom: 60px;
-}
-
-.back-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    color: rgba(255, 255, 255, 0.7);
-    margin-bottom: 20px;
-    font-size: 0.9rem;
-    transition: color 0.3s;
-}
-
-.back-link:hover {
-    color: white;
+    /* Default text color */
 }
 
 .product-list-header h1 {
-    color: white !important;
-    margin-bottom: 15px;
+    font-size: 2.5rem;
+    /* Restored size for impact */
+    font-weight: 700;
+    color: white;
+    /* contrast */
+    margin: 8px 0 16px 0;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .product-list-header p {
-    color: rgba(255, 255, 255, 0.8) !important;
+    color: #666;
+    font-size: 1.1rem;
     max-width: 600px;
-    font-size: 1.2rem;
+}
+
+.breadcrumb-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.8);
+    /* Light silver */
+    margin-bottom: 12px;
+}
+
+.breadcrumb-link {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.breadcrumb-link:hover {
+    color: #fff;
+    /* White on hover */
+    text-decoration: underline;
+}
+
+.breadcrumb-separator {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.breadcrumb-current {
+    font-weight: 600;
+    color: #fff;
 }
 
 .product-list-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
+    /* Enforce 3 columns */
     gap: 30px;
 }
 
 .detail-card {
     background: white;
-    border: 1px solid #e2e8f0;
     border-radius: 12px;
+    /* Rounded corners */
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    /* Soft, professional shadow */
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #f0f0f0;
 }
 
 .detail-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(15, 76, 129, 0.12);
+    /* Blue-tinted shadow on hover */
 }
 
 .detail-image {
-    height: 200px;
-    background: #f8fafc;
+    background: #fff;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 240px;
     position: relative;
-}
-
-.detail-tag {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background: rgba(14, 165, 233, 0.1);
-    color: var(--primary-color);
-    padding: 4px 10px;
-    border-radius: 4px;
-    font-size: 0.75rem;
-    font-weight: 600;
+    /* Removed border to create seamless look */
 }
 
 .detail-image img {
+    max-width: 100%;
     max-height: 100%;
     object-fit: contain;
 }
 
+.detail-tag {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(15, 76, 129, 0.08);
+    /* Minimal Light Blue BG */
+    color: #0F4C81;
+    /* Deep Pharma Blue */
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
 .detail-info {
-    padding: 24px;
+    padding: 12px 20px 20px 20px;
+    /* Reduced top padding from 20px to 12px */
     display: flex;
     flex-direction: column;
-    height: 100%;
+    height: calc(100% - 240px);
 }
 
 .detail-info h3 {
     font-size: 1.15rem;
-    color: var(--secondary-color);
+    /* Clean, modern sizing */
+    font-weight: 700;
+    color: #0F4C81;
+    /* Deep Pharma Blue */
     margin-bottom: 8px;
-    line-height: 1.4;
+    line-height: 1.3;
+    font-family: 'Inter', sans-serif;
+    /* Implied sans-serif stack */
 }
 
 .detail-desc {
-    font-size: 0.9rem;
-    color: var(--text-secondary);
-    margin-bottom: 20px;
-    line-height: 1.5;
-    flex-grow: 1;
+    color: #64748b;
+    /* Soft neutral gray (Slate 500) */
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    line-height: 1.6;
+    /* Calm, readable leading */
+    font-weight: 400;
 }
 
 .btn-inquire {
-    display: block;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: transparent;
-    color: var(--primary-color);
-    border: 1px solid var(--primary-color);
-    padding: 10px;
+    /* Transparent BG */
+    color: #0F4C81;
+    /* Deep Pharma Blue Text */
+    border: 1px solid #0F4C81;
+    /* Matching Border */
+    text-decoration: none;
+    padding: 10px 0;
     border-radius: 6px;
+    /* Slightly softer corners */
     font-weight: 600;
-    transition: all 0.3s ease;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+    font-size: 0.9rem;
+    transition: all 0.2s ease-in-out;
     margin-top: auto;
 }
 
 .btn-inquire:hover {
-    background: var(--primary-color);
+    background: #0F4C81;
+    /* Fills with Blue */
     color: white;
-    box-shadow: 0 4px 10px rgba(14, 165, 233, 0.2);
+    /* Text turns White */
+    box-shadow: 0 4px 12px rgba(15, 76, 129, 0.2);
+}
+
+/* Sidebar Layout Styles */
+.product-layout-container {
+    display: flex;
+    gap: 20px;
+    /* Reduced gap */
+    align-items: flex-start;
+}
+
+.product-sidebar {
+    width: 260px;
+    position: sticky;
+    top: 100px;
+    background: transparent;
+    /* Clean look */
+    /* Removed card styling to match reference text-only look */
+    padding: 0;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    border: none;
+    box-shadow: none;
+}
+
+.product-sidebar h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #002878;
+    /* Swapped to Deep Royal Blue */
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    padding-bottom: 0;
+    border-bottom: none;
+    letter-spacing: 0.5px;
+}
+
+.sidebar-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.sidebar-link {
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 8px 0 8px 16px;
+    /* Indent sub-categories for hierarchy */
+    font-size: 1rem;
+    color: #4a5568;
+    /* Dark grey text */
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 100%;
+    font-weight: 400;
+    border-left: 3px solid transparent;
+    /* Marker for active state */
+}
+
+.sidebar-link:hover {
+    color: #437199;
+    /* Softer Blue as requested */
+    background: transparent;
+    font-weight: 600;
+    padding-left: 20px;
+    border-left-color: rgba(67, 113, 153, 0.3);
+}
+
+.sidebar-link.active {
+    color: #139CC6;
+    /* Swapped to Cyan-Blue */
+    background: transparent;
+    font-weight: 700;
+    border-left-color: #139CC6;
+    /* Matching Cyan-Blue marker */
+    padding-left: 20px;
+}
+
+.product-main-content {
+    flex: 1;
+    min-width: 0;
+    /* Prevents flex overflow */
+}
+
+.sub-category-section {
+    margin-bottom: 60px;
+    scroll-margin-top: 120px;
+    /* Offset for sticky header/scroll */
+}
+
+.sub-category-title {
+    font-size: 1.75rem;
+    color: #2c3e50;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #cbd5e1;
+    /* Increased thickness and darkened color */
+}
+
+@media (max-width: 900px) {
+    .product-layout-container {
+        flex-direction: column;
+    }
+
+    .product-sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 40px;
+        max-height: none;
+    }
 }

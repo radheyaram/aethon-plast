@@ -48,7 +48,6 @@ export const productData = {
         title: 'Closures',
         description: 'Advanced closure systems including child-resistant and tamper-evident options.',
         items: [
-            // CR Closures
             { id: '1', name: '28 mm CR closure with HS 130 liner', subCategory: 'CR Closures', image: crClosureHs130Img, description: 'Child-resistant closure with heat seal liner for secure sealing.' },
             { id: '2', name: '28mm-SP400 "M" style CR closure with liner', subCategory: 'CR Closures', image: sp400MStyleImg, description: '28mm SP400 closure featuring "M" style design with protective liner.' },
             { id: '3', name: '28 mm PP CR closure with liner HS035/25W', subCategory: 'CR Closures', image: ppCrHs035Img, description: 'Polypropylene CR closure with high-performance HS035 liner.' },
@@ -60,11 +59,9 @@ export const productData = {
             { id: '9', name: '28 mm PP CR closure with liner TG II-TS', subCategory: 'CR Closures', image: ppCrHs035Img, description: '28mm PP closure with TG II-TS liner for specific applications.' },
             { id: '10', name: '38 mm PP CR closure (HS035 HeatSeal / 20)', subCategory: 'CR Closures', image: safCap38Img, description: 'Heat-sealable 38mm PP CR closure.' },
 
-            // SAF Caps
             { id: '11', name: '38 mm SAF Cap IIIA – Triveni Polymer', subCategory: 'SAF Caps', image: safCap38Img, description: '38mm SAF Cap IIIA designed for high reliability.' },
             { id: '12', name: '33 mm SAF Cap IIIA – Triveni Polymer', subCategory: 'SAF Caps', image: safCap33Img, description: '33mm SAF Cap IIIA offering superior sealing performance.' },
 
-            // CT Closures
             { id: '13', name: '38 mm CT Closure – Pravesha Industries', subCategory: 'CT Closures', image: ctClosure38Img, description: 'Standard 38mm Continuous Thread (CT) closure.' },
             { id: '14', name: 'CT Closure 53 mm with liner (HS123-20)', subCategory: 'CT Closures', image: ctClosure53Img, description: 'Wide 53mm CT closure with HS123-20 liner.' },
             { id: '15', name: '38 mm PP CT closure (HS035 HeatSeal / 20)', subCategory: 'CT Closures', image: ppCtHeatsealImg, description: '38mm PP CT closure with heat seal capability.' },

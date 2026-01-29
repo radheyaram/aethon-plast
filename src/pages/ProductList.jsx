@@ -17,7 +17,7 @@ const ProductList = () => {
         );
     }
 
-    // Group items by subCategory
+
     const groupedItems = category.items.reduce((acc, item) => {
         const sub = item.subCategory || 'Other';
         if (!acc[sub]) acc[sub] = [];
@@ -29,7 +29,6 @@ const ProductList = () => {
 
     const [activeSub, setActiveSub] = useState(null);
 
-    // Set initial active sub-category
     useEffect(() => {
         if (subCategories.length > 0 && !activeSub) {
             setActiveSub(subCategories[0]);

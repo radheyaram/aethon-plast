@@ -1,17 +1,14 @@
 /* Shared Page Styles */
 .page-header {
     background: linear-gradient(135deg, #0F2027 0%, #203a43 50%, #2c5364 100%);
-    /* Deep Teal Premium Gradient */
     color: var(--text-light);
     padding: 5rem 0;
-    /* Increased padding for better visual */
     text-align: center;
     position: relative;
     margin-bottom: var(--spacing-md);
     overflow: hidden;
 }
 
-/* Removed the dark overlay to let the gradient shine */
 .page-header::before {
     display: none;
 }
@@ -39,7 +36,6 @@
     padding-bottom: var(--spacing-xl);
 }
 
-/* Grid Layouts */
 .grid-3 {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -50,18 +46,14 @@
     background: var(--surface-color);
     border-radius: var(--border-radius-md);
     padding: 3rem 2rem;
-    /* Matched About Us card padding */
     box-shadow: var(--shadow-md);
     transition: transform var(--transition-normal), box-shadow var(--transition-normal);
     border: 1px solid #e2e8f0;
     height: 100%;
-    /* Ensure equal height */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* Center content vertically */
     min-height: 300px;
-    /* Increased consistency padding */
 }
 
 .card:hover {

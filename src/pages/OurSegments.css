@@ -42,24 +42,18 @@
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     border: 1px solid #f1f5f9;
-
-    /* Animation Initial State */
     opacity: 0;
     transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    /* Smooth ease-out-quad */
 }
 
-/* Slide from Left (Odd items) */
 .segment-row:nth-child(odd) {
     transform: translateX(-100px);
 }
 
-/* Slide from Right (Even items) */
 .segment-row:nth-child(even) {
     transform: translateX(100px);
 }
 
-/* Visible State (Triggered by JS) */
 .segment-row.visible {
     opacity: 1;
     transform: translateX(0);
@@ -76,7 +70,6 @@
 
 .segment-row.reverse .segment-content {
     direction: ltr;
-    /* Reset text direction */
 }
 
 .segment-image {
@@ -158,7 +151,6 @@
         gap: 40px;
     }
 
-    /* Mobile Animation Override: Fade Up */
     .segment-row:nth-child(odd),
     .segment-row:nth-child(even) {
         transform: translateY(50px);

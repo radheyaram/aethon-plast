@@ -33,7 +33,6 @@ const Home = () => {
 
     const [currentSlide, setCurrentSlide] = useState(0);
 
-    // Auto-slide effect
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentSlide((prev) => (prev + 1) % slides.length);

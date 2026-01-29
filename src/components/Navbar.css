@@ -168,10 +168,8 @@
     .nav-links li {
         width: 100%;
         padding-bottom: 20px;
-        /* Increased spacing */
         border-bottom: 1px solid #f1f5f9;
         margin-bottom: 20px;
-        /* Increased spacing */
     }
 
     .nav-links a {

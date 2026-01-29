@@ -24,6 +24,7 @@
 .logo {
     display: flex;
     align-items: center;
+    height: 100%;
 }
 
 .logo img {
@@ -38,6 +39,7 @@
     gap: var(--spacing-md);
     margin: 0;
     padding: 0;
+    white-space: nowrap;
 }
 
 .nav-links a {
@@ -95,6 +97,8 @@
     color: var(--secondary-color);
     align-items: center;
     justify-content: center;
+    height: 100%;
+    padding: 0 5px;
 }
 
 .nav-btn-highlight {
@@ -121,7 +125,21 @@
     display: none;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1200px) {
+    .nav-links {
+        gap: 1rem;
+    }
+
+    .logo img {
+        height: 32px;
+    }
+
+    .nav-links a {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 1024px) {
     .mobile-toggle {
         display: flex;
         z-index: 1001;

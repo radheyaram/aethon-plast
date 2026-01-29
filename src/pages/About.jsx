@@ -11,7 +11,7 @@ const About = () => {
                 </div>
             </div>
 
-            <div className="container" style={{ paddingBottom: '4rem' }}>
+            <div className="container section">
                 <div className="about-content">
                     <div className="about-main">
                         <h2>Who We Are</h2>

@@ -1,4 +1,4 @@
-import useScrollToTop from '../utils/useScrollToTop';
+import { useScrollToTop } from '../utils/useScrollToTop';
 
 const ScrollToTop = () => {
     useScrollToTop();

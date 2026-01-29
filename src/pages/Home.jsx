@@ -13,21 +13,21 @@ const Home = () => {
             image: bannerBottles,
             title: "Your Trusted Partner in",
             subtitle: "Plastic Packaging Excellence",
-            text: "Delivering premium quality pharmaceutical, cosmetic, and FMCG packaging solutions to international standards."
+            text: "Premium pharmaceutical and cosmetic packaging solutions meeting international standards."
         },
         {
             id: 2,
             image: bannerProduction,
             title: "Advanced Manufacturing",
             subtitle: "State-of-the-Art Technology",
-            text: "Precision engineering and clean-room molding facilities ensuring the highest hygiene standards."
+            text: "Precision engineering and clean-room facilities ensuring highest hygiene standards."
         },
         {
             id: 3,
             image: bannerCaps,
             title: "Innovative Solutions",
             subtitle: "Custom Caps & Closures",
-            text: "Tailored designs to enhance your brand identity and ensure product safety."
+            text: "Tailored designs to enhance brand identity and ensure product safety."
         }
     ];
 

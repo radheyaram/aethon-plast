@@ -10,6 +10,7 @@ import OurSegments from './pages/OurSegments';
 import Contact from './pages/Contact';
 import ScrollToTop from './components/ScrollToTop';
 import ErrorBoundary from './components/ErrorBoundary';
+import './App.css';
 
 function App() {
   return (

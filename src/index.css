@@ -2,6 +2,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  width: 100%;
 }
 
 :root {
@@ -148,20 +154,3 @@ button {
 }
 
 /* Scrollbar */
-::-webkit-scrollbar {
-  width: 10px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgb(44, 44, 44);
-}
-
-::-webkit-scrollbar-thumb {
-  background: #D1D1D1;
-  border-radius: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: #b0b0b0;
-  /* Slightly darker on hover */
-}

@@ -1,5 +1,6 @@
 
-import { Pill, Leaf, Sparkles, ShoppingBag } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Pill, Leaf, Sparkles, ShoppingBag, ArrowRight } from 'lucide-react';
 const pharmaImg = '/assets/segment_pharma_1769615897321.png';
 const nutraImg = '/assets/segment_nutra_1769616067190.png';
 const cosmeticImg = '/assets/pharma_banner_bottles_1769614352905.png';
@@ -104,6 +105,9 @@ const OurSegments = () => {
                                     <li key={`${segment.id}-feat-${idx}`}>{feature}</li>
                                 ))}
                             </ul>
+                            <Link to={`/products/${segment.id}`} className="btn-segment-view">
+                                View Products <ArrowRight size={16} />
+                            </Link>
                         </div>
                     </div>
                 ))}

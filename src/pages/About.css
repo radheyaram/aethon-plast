@@ -52,3 +52,9 @@
     color: var(--text-secondary);
     margin: 0;
 }
+
+/* Reduce space above the specific section in About page */
+.about-page .section {
+    padding-top: 3rem;
+    /* Reduced from default 8rem */
+}

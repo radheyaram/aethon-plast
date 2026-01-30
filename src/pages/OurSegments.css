@@ -148,9 +148,11 @@
 @media (max-width: 900px) {
     .segment-row {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 0;
+        border-radius: 16px;
     }
 
+    /* Change animation to bottom-up on mobile */
     .segment-row:nth-child(odd),
     .segment-row:nth-child(even) {
         transform: translateY(50px);
@@ -158,17 +160,79 @@
 
     .segment-row.visible {
         transform: translateY(0);
-    }
-
-    .segment-row.reverse {
-        direction: ltr;
+        opacity: 1;
     }
 
     .segment-image {
-        height: 300px;
+        height: 250px;
+        /* Reduced height for mobile */
+    }
+
+    .segment-content {
+        padding: 24px;
+        /* Reduced padding */
     }
 
     .segment-content h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
+        /* Smaller heading */
     }
+}
+
+@media (max-width: 600px) {
+    .serve-header {
+        padding: 60px 0;
+    }
+
+    .serve-header h1 {
+        font-size: 2.2rem;
+    }
+
+    .segments-container {
+        gap: 40px;
+    }
+
+    .segment-content {
+        padding: 20px;
+    }
+
+    .segment-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .segment-features {
+        grid-template-columns: 1fr;
+        /* Stack features on very small screens */
+    }
+}
+
+
+.btn-segment-view {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 24px;
+    gap: 12px;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 50px;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    background: transparent;
+    margin-top: 30px;
+    /* Added margin top */
+    width: fit-content;
+    align-self: center;
+    /* Center horizontally in flex column */
+}
+
+.btn-segment-view:hover {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+    color: white;
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(14, 165, 233, 0.3);
+    gap: 15px;
 }

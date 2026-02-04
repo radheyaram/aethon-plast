@@ -51,7 +51,11 @@ const ProductDetail = () => {
                 <div className="breadcrumb-nav">
                     <Link to="/products" className="breadcrumb-link">Products</Link>
                     <span className="breadcrumb-separator">»</span>
-                    <Link to={`/products/${product.categoryId}`} className="breadcrumb-link">{product.categoryTitle}</Link>
+                    {product.industryId ? (
+                        <Link to={`/products/${product.industryId}`} className="breadcrumb-link">{product.industryTitle}</Link>
+                    ) : (
+                        <Link to={`/products/${product.categoryId}`} className="breadcrumb-link">{product.categoryTitle}</Link>
+                    )}
                     <span className="breadcrumb-separator">»</span>
                     <span className="breadcrumb-current">{product.name}</span>
                 </div>

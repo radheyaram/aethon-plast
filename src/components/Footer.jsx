@@ -16,9 +16,9 @@ const Footer = () => {
                         Leading manufacturer of high-quality plastic packaging solutions. We serve industries globally with innovation and integrity.
                     </p>
                     <div className="social-links">
-                        <a href={SOCIAL_LINKS.FACEBOOK} target="_blank" rel="noopener noreferrer" className="social-icon"><Facebook size={18} /></a>
-                        <a href={SOCIAL_LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer" className="social-icon"><Instagram size={18} /></a>
-                        <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noopener noreferrer" className="social-icon"><Linkedin size={18} /></a>
+                        <a href={SOCIAL_LINKS.FACEBOOK} target="_blank" rel="noopener noreferrer" className="social-icon"><Facebook size={24} /></a>
+                        <a href={SOCIAL_LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer" className="social-icon"><Instagram size={24} /></a>
+                        <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noopener noreferrer" className="social-icon"><Linkedin size={24} /></a>
                     </div>
                 </div>
 
@@ -34,23 +34,29 @@ const Footer = () => {
                 <div className="footer-section">
                     <h3>Contact Info</h3>
                     <ul className="footer-links">
-                        <li style={{ display: 'flex', gap: '10px' }}>
-                            <MapPin size={24} className="text-primary" />
+                        <li style={{ display: 'flex', gap: '15px' }}>
+                            <div style={{ width: '40px', display: 'flex', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
+                                <MapPin size={32} className="text-primary" />
+                            </div>
                             <a
                                 href={CONTACT_INFO.MAP_LINK}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                style={{ color: 'inherit', textDecoration: 'none' }}
+                                style={{ color: 'inherit', textDecoration: 'none', lineHeight: '1.5' }}
                             >
                                 {CONTACT_INFO.ADDRESS}
                             </a>
                         </li>
-                        <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                            <Phone size={20} className="text-primary" />
+                        <li style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+                            <div style={{ width: '40px', display: 'flex', justifyContent: 'center', flexShrink: 0 }}>
+                                <Phone size={24} className="text-primary" />
+                            </div>
                             <a href={`tel:${CONTACT_INFO.PHONE}`} style={{ color: 'inherit', textDecoration: 'none' }}>{CONTACT_INFO.PHONE}</a>
                         </li>
-                        <li style={{ display: 'flex', gap: '10px', alignItems: 'center' }}>
-                            <Mail size={20} className="text-primary" />
+                        <li style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
+                            <div style={{ width: '40px', display: 'flex', justifyContent: 'center', flexShrink: 0 }}>
+                                <Mail size={24} className="text-primary" />
+                            </div>
                             <a href={`mailto:${CONTACT_INFO.EMAIL}`} style={{ color: 'inherit', textDecoration: 'none' }}>{CONTACT_INFO.EMAIL}</a>
                         </li>
                     </ul>
@@ -60,7 +66,7 @@ const Footer = () => {
             <div className="container footer-bottom">
                 <p>&copy; {new Date().getFullYear()} Aethon Plast Pvt Ltd. All rights reserved.</p>
             </div>
-        </footer>
+        </footer >
     );
 };
 

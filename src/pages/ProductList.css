@@ -105,45 +105,71 @@
 }
 
 .product-sidebar h3 {
-    font-size: 1rem;
+    display: none;
+    /* Hide original title if we are using groups */
+}
+
+/* Hierarchical Styles */
+.sidebar-group {
+    margin-bottom: 30px;
+    /* Add spacing between groups */
+}
+
+.sidebar-group-title {
+    font-size: 1.1rem;
     font-weight: 700;
-    color: #002878;
+    color: #0F4C81;
+    /* Deep Blue Theme Color */
     text-transform: uppercase;
-    margin-bottom: 12px;
-    padding-bottom: 0;
-    border-bottom: none;
+    margin: 0 0 12px 0;
     letter-spacing: 0.5px;
+    padding: 0;
+    border: none;
+    background: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sidebar-group-title:hover {
+    color: #1a6cb1;
 }
 
 .sidebar-nav {
     display: flex;
     flex-direction: column;
-    gap: 4px;
+    padding-right: 20px;
 }
 
 .sidebar-link {
     background: none;
     border: none;
     text-align: left;
-    padding: 8px 0 8px 32px;
+    padding: 8px 0 8px 15px;
+    /* Indent sub-items */
     font-size: 1rem;
-    color: #4a5568;
+    color: #555;
     cursor: pointer;
     transition: all 0.2s;
     width: 100%;
     font-weight: 400;
+    border-left: 2px solid transparent;
 }
 
 .sidebar-link:hover {
-    color: #437199;
-    background: transparent;
-    font-weight: 600;
+    color: #0F4C81;
+    background: #f8fafc;
+    border-left-color: #cbd5e1;
 }
 
 .sidebar-link.active {
-    color: #139CC6;
-    background: transparent;
-    font-weight: 700;
+    color: #0F4C81;
+    background: #eff6ff;
+    font-weight: 600;
+    border-left-color: #0F4C81;
 }
 
 .product-main-content {
@@ -178,15 +204,7 @@
 }
 
 /* Hierarchical Styles */
-.sidebar-group-title {
-    font-size: 0.85rem;
-    font-weight: 700;
-    color: #0F4C81;
-    text-transform: uppercase;
-    margin: 10px 0 8px 0;
-    letter-spacing: 1px;
-    padding-left: 16px;
-}
+
 
 .parent-category-group {
     margin-bottom: 60px;
@@ -299,7 +317,7 @@
 .accordion-icon {
     font-size: 1.2rem;
     font-weight: 400;
-    color: #cbd5e1;
+    color: #0F4C81;
 }
 
 .accordion-trigger.active .accordion-icon {

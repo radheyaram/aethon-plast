@@ -1,33 +1,41 @@
 
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-const bottleImg = '/assets/group_bottles.png';
-const capImg = '/assets/group_caps.png';
-const closureImg = '/assets/group_closures.png';
+const pharmaImg = '/assets/segment_pharma_1769615897321.png';
+const nutraImg = '/assets/segment_nutra_1769616067190.png';
+const cosmeticImg = '/assets/pharma_banner_bottles_1769614352905.png';
+const fmcgImg = '/assets/pharma_banner_production_retry_1769615616299.png';
 import './Products.css';
 
 const Products = () => {
     const categories = [
         {
-            id: 'bottles',
-            name: 'Bottles',
-            image: bottleImg,
-            description: 'High-quality pharma-grade plastic bottles available in various sizes and colors.',
-            tag: 'Pharma Packaging'
+            id: 'pharmaceuticals',
+            name: 'Pharmaceuticals',
+            image: pharmaImg,
+            description: 'Regulatory-compliant packaging solutions ensuring safety, hygiene, and precision.',
+            tag: 'Industry Standard'
         },
         {
-            id: 'caps',
-            name: 'Caps',
-            image: capImg,
-            description: 'Precision-molded screw caps ensuring tight sealing and safety.',
-            tag: 'Accessories'
+            id: 'nutraceuticals',
+            name: 'Nutraceuticals',
+            image: nutraImg,
+            description: 'Protective packaging for supplements combining shelf appeal with safety.',
+            tag: 'Health & Wellness'
         },
         {
-            id: 'closures',
-            name: 'Closures',
-            image: closureImg,
-            description: 'Advanced closure systems including child-resistant and tamper-evident options.',
-            tag: 'Safety Solutions'
+            id: 'cosmetics',
+            name: 'Cosmetics',
+            image: cosmeticImg,
+            description: 'Aesthetically pleasing and functional containers for beauty and personal care.',
+            tag: 'Premium Design'
+        },
+        {
+            id: 'fmcg',
+            name: 'FMCG',
+            image: fmcgImg,
+            description: 'Durable, cost-effective packaging solutions for fast-moving consumer goods.',
+            tag: 'High Volume'
         }
     ];
 
@@ -35,8 +43,8 @@ const Products = () => {
         <div className="products-page">
             <div className="products-header">
                 <div className="container">
-                    <h1>Our Products</h1>
-                    <p>Specialized plastic packaging solutions for the pharmaceutical industry.</p>
+                    <h1>Market Segments</h1>
+                    <p>Explore our specialized packaging solutions across key industries.</p>
                 </div>
             </div>
 

@@ -105,9 +105,6 @@ const OurSegments = () => {
                                     <li key={`${segment.id}-feat-${idx}`}>{feature}</li>
                                 ))}
                             </ul>
-                            <Link to={`/products/${segment.id}`} className="btn-segment-view">
-                                View Products <ArrowRight size={16} />
-                            </Link>
                         </div>
                     </div>
                 ))}

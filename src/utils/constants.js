@@ -4,7 +4,7 @@ export const CONTACT_INFO = {
     PHONE: '9000386555',
     EMAIL: 'info@aethonplast.com',
     ADDRESS: 'AGM Chambers, 390/A, 446/15/E, Sai Colony, R.C Puram, Sangareddy District, 502032, Telangana',
-    MAP_LINK: 'https://www.google.com/maps/search/?api=1&query=AGM+Chambers,+390/A,+446/15/E,+Sai+Colony,+R.C+Puram,+Sangareddy+District,+502032,+Telangana'
+    MAP_LINK: 'https://maps.app.goo.gl/rFa3mJ4pW65ThcCu7'
 };
 
 export const SOCIAL_LINKS = {
@@ -24,7 +24,6 @@ export const NAV_LINKS = [
 export const CONTACT_SUBJECTS = [
     'Product Inquiry',
     'Custom Mold Request',
-    'Partnership',
     'Other'
 ];
 

@@ -46,7 +46,9 @@ const Contact = () => {
                                 <Phone size={32} />
                                 <div>
                                     <h4>Phone</h4>
-                                    <p>{CONTACT_INFO.PHONE}</p>
+                                    <a href={`tel:${CONTACT_INFO.PHONE}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                                        <p>{CONTACT_INFO.PHONE}</p>
+                                    </a>
                                 </div>
                             </div>
 
@@ -54,7 +56,9 @@ const Contact = () => {
                                 <Mail size={32} />
                                 <div>
                                     <h4>Email</h4>
-                                    <p>{CONTACT_INFO.EMAIL}</p>
+                                    <a href={`mailto:${CONTACT_INFO.EMAIL}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                                        <p>{CONTACT_INFO.EMAIL}</p>
+                                    </a>
                                 </div>
                             </div>
                         </div>

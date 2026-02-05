@@ -22,10 +22,12 @@ const Contact = () => {
                 <div className="container">
                     <div className="contact-container">
                         <div className="contact-info">
-                            <h2>Get in Touch</h2>
-                            <p style={{ marginBottom: '2rem', opacity: 0.9 }}>
-                                Our team is ready to assist you with your packaging requirements.
-                            </p>
+                            <div style={{ textAlign: 'center' }}>
+                                <h2>Get in Touch</h2>
+                                <p style={{ marginBottom: '2rem', opacity: 0.9 }}>
+                                    Our team is ready to assist you with your packaging requirements.
+                                </p>
+                            </div>
 
                             <div className="info-item">
                                 <a href={CONTACT_INFO.MAP_LINK} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>

@@ -85,4 +85,9 @@ textarea.form-control {
     .contact-container {
         grid-template-columns: 1fr;
     }
+
+    .contact-page .btn-primary {
+        display: block;
+        margin: 0 auto;
+    }
 }

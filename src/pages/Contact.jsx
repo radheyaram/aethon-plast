@@ -14,7 +14,7 @@ const Contact = () => {
             <div className="page-header">
                 <div className="container">
                     <h1>Contact Us</h1>
-                    <p>Get in touch for quotes, custom inquiries, or partnership opportunities.</p>
+                    <p>Get in touch for quotes, product inquiries, and custom manufacturing solutions.</p>
                 </div>
             </div>
 
@@ -46,7 +46,7 @@ const Contact = () => {
                                 <Phone size={32} />
                                 <div>
                                     <h4>Phone</h4>
-                                    <a href={`tel:${CONTACT_INFO.PHONE}`} style={{ color: 'inherit', textDecoration: 'none' }}>
+                                    <a href="https://wa.me/919000386555" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
                                         <p>{CONTACT_INFO.PHONE}</p>
                                     </a>
                                 </div>

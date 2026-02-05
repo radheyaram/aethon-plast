@@ -1,6 +1,5 @@
-/* Shared Page Styles */
 .page-header {
-    background: linear-gradient(135deg, #0F2027 0%, #203a43 50%, #2c5364 100%);
+    background: linear-gradient(135deg, #0F4C81 0%, #0a3d6b 100%);
     color: var(--text-light);
     padding: 5rem 0;
     text-align: center;

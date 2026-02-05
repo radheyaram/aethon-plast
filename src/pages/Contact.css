@@ -1,7 +1,6 @@
-/* Contact Page Styles */
 .contact-container {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
+    grid-template-columns: 1fr 2fr;
     gap: var(--spacing-lg);
     background: white;
     border-radius: var(--border-radius-lg);
@@ -10,9 +9,12 @@
 }
 
 .contact-info {
-    background-color: var(--secondary-color);
+    background: #022776;
     color: white;
     padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .contact-info h2 {
@@ -20,7 +22,8 @@
 }
 
 .contact-info p {
-    color: #cbd5e1;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
 }
 
 .info-item {

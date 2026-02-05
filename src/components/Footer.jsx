@@ -22,7 +22,7 @@ const Footer = () => {
                     </div>
                 </div>
 
-                <div className="footer-section">
+                <div className="footer-section quick-links">
                     <h3>Quick Links</h3>
                     <ul className="footer-links">
                         {NAV_LINKS.map(link => (
@@ -51,7 +51,7 @@ const Footer = () => {
                             <div style={{ width: '40px', display: 'flex', justifyContent: 'center', flexShrink: 0 }}>
                                 <Phone size={24} className="text-primary" />
                             </div>
-                            <a href={`tel:${CONTACT_INFO.PHONE}`} style={{ color: 'inherit', textDecoration: 'none' }}>{CONTACT_INFO.PHONE}</a>
+                            <a href="https://wa.me/919000386555" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>{CONTACT_INFO.PHONE}</a>
                         </li>
                         <li style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
                             <div style={{ width: '40px', display: 'flex', justifyContent: 'center', flexShrink: 0 }}>

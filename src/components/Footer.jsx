@@ -15,29 +15,36 @@ const Footer = () => {
                     <p>
                         Leading manufacturer of high-quality plastic packaging solutions. We serve industries globally with innovation and integrity.
                     </p>
-                    <div className="social-links">
-                        <a href={SOCIAL_LINKS.FACEBOOK} target="_blank" rel="noopener noreferrer" className="social-icon"><Facebook size={24} /></a>
-                        <a href={SOCIAL_LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer" className="social-icon"><Instagram size={24} /></a>
-                        <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noopener noreferrer" className="social-icon"><Linkedin size={24} /></a>
-                    </div>
                 </div>
 
                 <div className="footer-section quick-links">
                     <h3>Quick Links</h3>
                     <ul className="footer-links">
                         {NAV_LINKS.map(link => (
-                            <li key={link.name}><Link to={link.path}>{link.name}</Link></li>
+                            <li key={link.name}>
+                                <Link
+                                    to={link.path}
+                                    onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                                >
+                                    {link.name}
+                                </Link>
+                            </li>
                         ))}
                     </ul>
                 </div>
 
-                <div className="footer-section">
+                <div className="footer-section footer-contact-info">
                     <h3>Contact Info</h3>
                     <ul className="footer-links">
                         <li style={{ display: 'flex', gap: '15px' }}>
-                            <div style={{ width: '40px', display: 'flex', justifyContent: 'center', flexShrink: 0, marginTop: '2px' }}>
+                            <a
+                                href={CONTACT_INFO.MAP_LINK}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ width: '40px', display: 'flex', justifyContent: 'flex-start', paddingLeft: '4px', flexShrink: 0, marginTop: '2px', color: 'inherit' }}
+                            >
                                 <MapPin size={32} className="text-primary" />
-                            </div>
+                            </a>
                             <a
                                 href={CONTACT_INFO.MAP_LINK}
                                 target="_blank"
@@ -48,18 +55,35 @@ const Footer = () => {
                             </a>
                         </li>
                         <li style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-                            <div style={{ width: '40px', display: 'flex', justifyContent: 'center', flexShrink: 0 }}>
+                            <a
+                                href="https://wa.me/919000386555"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                style={{ width: '40px', display: 'flex', justifyContent: 'flex-start', paddingLeft: '4px', flexShrink: 0, color: 'inherit' }}
+                            >
                                 <Phone size={24} className="text-primary" />
-                            </div>
+                            </a>
                             <a href="https://wa.me/919000386555" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>{CONTACT_INFO.PHONE}</a>
                         </li>
                         <li style={{ display: 'flex', gap: '15px', alignItems: 'center' }}>
-                            <div style={{ width: '40px', display: 'flex', justifyContent: 'center', flexShrink: 0 }}>
+                            <a
+                                href={`mailto:${CONTACT_INFO.EMAIL}`}
+                                style={{ width: '40px', display: 'flex', justifyContent: 'flex-start', paddingLeft: '4px', flexShrink: 0, color: 'inherit' }}
+                            >
                                 <Mail size={24} className="text-primary" />
-                            </div>
+                            </a>
                             <a href={`mailto:${CONTACT_INFO.EMAIL}`} style={{ color: 'inherit', textDecoration: 'none' }}>{CONTACT_INFO.EMAIL}</a>
                         </li>
                     </ul>
+                </div>
+
+                <div className="footer-section">
+                    <h3>Follow Us On</h3>
+                    <div className="social-links" style={{ marginTop: '0' }}>
+                        <a href={SOCIAL_LINKS.FACEBOOK} target="_blank" rel="noopener noreferrer" className="social-icon"><Facebook size={24} /></a>
+                        <a href={SOCIAL_LINKS.INSTAGRAM} target="_blank" rel="noopener noreferrer" className="social-icon"><Instagram size={24} /></a>
+                        <a href={SOCIAL_LINKS.LINKEDIN} target="_blank" rel="noopener noreferrer" className="social-icon"><Linkedin size={24} /></a>
+                    </div>
                 </div>
             </div>
 

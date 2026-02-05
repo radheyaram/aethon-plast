@@ -267,6 +267,7 @@
 
     .nav-links li {
         width: 100%;
+        height: auto;
         padding-bottom: 20px;
         border-bottom: 1px solid #f1f5f9;
         margin-bottom: 20px;
@@ -328,14 +329,27 @@
         border: 1px solid #e2e8f0;
     }
 
+
+    .has-dropdown:hover .dropdown-menu {
+        transform: none;
+        display: none;
+    }
+
+    .has-dropdown:hover .dropdown-toggle {
+        transform: none;
+    }
+
     .dropdown-menu.open {
-        display: block;
+        display: block !important;
         animation: slideDown 0.3s ease-out;
     }
 
     .dropdown-menu li {
         width: 100%;
+        height: auto;
         border-bottom: 1px solid #edf2f7;
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
 
     .dropdown-menu li:last-child {

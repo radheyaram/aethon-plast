@@ -28,7 +28,9 @@ const Contact = () => {
                             </p>
 
                             <div className="info-item">
-                                <MapPin size={32} />
+                                <a href={CONTACT_INFO.MAP_LINK} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                                    <MapPin size={32} />
+                                </a>
                                 <div>
                                     <h4>Headquarters</h4>
                                     <a
@@ -43,7 +45,9 @@ const Contact = () => {
                             </div>
 
                             <div className="info-item">
-                                <Phone size={32} />
+                                <a href="https://wa.me/919000386555" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit' }}>
+                                    <Phone size={32} />
+                                </a>
                                 <div>
                                     <h4>Phone</h4>
                                     <a href="https://wa.me/919000386555" target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'none' }}>
@@ -53,7 +57,9 @@ const Contact = () => {
                             </div>
 
                             <div className="info-item">
-                                <Mail size={32} />
+                                <a href={`mailto:${CONTACT_INFO.EMAIL}`} style={{ color: 'inherit' }}>
+                                    <Mail size={32} />
+                                </a>
                                 <div>
                                     <h4>Email</h4>
                                     <a href={`mailto:${CONTACT_INFO.EMAIL}`} style={{ color: 'inherit', textDecoration: 'none' }}>

@@ -152,7 +152,6 @@
         border-radius: 16px;
     }
 
-    /* Change animation to bottom-up on mobile */
     .segment-row:nth-child(odd),
     .segment-row:nth-child(even) {
         transform: translateY(50px);
@@ -165,17 +164,14 @@
 
     .segment-image {
         height: 250px;
-        /* Reduced height for mobile */
     }
 
     .segment-content {
         padding: 24px;
-        /* Reduced padding */
     }
 
     .segment-content h2 {
         font-size: 1.75rem;
-        /* Smaller heading */
     }
 }
 
@@ -202,7 +198,6 @@
 
     .segment-features {
         grid-template-columns: 1fr;
-        /* Stack features on very small screens */
     }
 }
 
@@ -221,11 +216,10 @@
     font-size: 0.95rem;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     background: transparent;
+    background: transparent;
     margin-top: 30px;
-    /* Added margin top */
     width: fit-content;
     align-self: center;
-    /* Center horizontally in flex column */
 }
 
 .btn-segment-view:hover {

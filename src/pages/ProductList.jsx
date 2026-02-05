@@ -6,34 +6,27 @@ import { productData } from '../data/products';
 import ProductCard from '../components/ProductCard';
 
 const ProductList = () => {
-    const { id } = useParams(); // 'pharmaceuticals', 'nutraceuticals', etc.
+    const { id } = useParams();
     const [searchParams] = useSearchParams();
-    const queryCategory = searchParams.get('category'); // e.g., 'bottles'
+    const queryCategory = searchParams.get('category');
 
-    // 1. Resolve the Industry (Segment)
     const industryData = useMemo(() => {
         return productData[id] || null;
     }, [id]);
 
-    // 2. Flatten or Group specific data based on selection
     const groupedData = useMemo(() => {
         if (!industryData || !industryData.categories) return {};
 
         let data = {};
 
-        // If a specific category is requested via query param (e.g. ?category=bottles)
         if (queryCategory && industryData.categories[queryCategory.toLowerCase()]) {
             const cat = industryData.categories[queryCategory.toLowerCase()];
-            // Group by SubCategory Key (e.g. 'hdpe', 'pet')
             Object.entries(cat.subCategories).forEach(([subKey, subData]) => {
                 data[subData.title] = subData.items;
             });
         } else {
-            // Show ALL Categories and SubCategories for this Industry
-            // Structure: { "Bottles": { "HDPE": [...], "PET": [...] }, "Caps": { ... } }
-
             Object.values(industryData.categories).forEach(cat => {
-                const groupTitle = cat.title; // e.g. "Bottles"
+                const groupTitle = cat.title;
                 if (cat.subCategories) {
                     const subGroups = {};
                     Object.values(cat.subCategories).forEach(sub => {
@@ -46,16 +39,13 @@ const ProductList = () => {
         return data;
     }, [industryData, queryCategory]);
 
-    // Check if we have valid data to show
     const hasData = Object.keys(groupedData).length > 0;
 
     const [activeSub, setActiveSub] = useState('All');
     const [expandedKeys, setExpandedKeys] = useState({});
 
-    // Initialize expanded keys
     useEffect(() => {
         if (hasData) {
-            // Expand all by default
             const keys = {};
             Object.keys(groupedData).forEach(key => keys[key] = true);
             setExpandedKeys(keys);
@@ -64,18 +54,15 @@ const ProductList = () => {
 
     const toggleGroup = (key) => {
         setExpandedKeys(prev => {
-            // Check if the clicked key is already the ONLY one open
             const isIsolated = Object.keys(prev).length === 1 && prev[key];
 
             if (isIsolated) {
-                return {}; // Close it if it's already the only one open
+                return {};
             }
-            // Otherwise (if multiple are open, or another one is open), isolate this one
             return { [key]: true };
         });
     };
 
-    // --- Pagination & Search (Standard logic) ---
     const [currentPage, setCurrentPage] = useState(1);
     const ITEMS_PER_PAGE = 12;
 
@@ -91,11 +78,9 @@ const ProductList = () => {
         setCurrentPage(1);
     }, [activeSub, id, queryCategory, debouncedSearchQuery]);
 
-    // Flatten all available products for "All" view + Search
     const allProducts = useMemo(() => {
         let products = [];
         Object.values(groupedData).forEach(subGroups => {
-            // groupedData is { "Bottles": { "HDPE": [items] } }
             Object.values(subGroups).forEach(items => {
                 products = [...products, ...items];
             });
@@ -103,15 +88,12 @@ const ProductList = () => {
         return products;
     }, [groupedData]);
 
-    // Filter Logic
     const displayedProducts = useMemo(() => {
         let filtered = [];
 
         if (activeSub === 'All') {
             filtered = allProducts;
         } else {
-            // activeSub is a SubCategory Name (e.g. "HDPE Bottles")
-            // Search through groupedData to find it
             Object.values(groupedData).forEach(subGroups => {
                 if (subGroups[activeSub]) {
                     filtered = [...filtered, ...subGroups[activeSub]];
@@ -131,7 +113,6 @@ const ProductList = () => {
         return filtered;
     }, [activeSub, allProducts, groupedData, debouncedSearchQuery]);
 
-    // Pagination Slicing
     const totalPages = Math.ceil(displayedProducts.length / ITEMS_PER_PAGE);
     const paginatedProducts = displayedProducts.slice(
         (currentPage - 1) * ITEMS_PER_PAGE,
@@ -145,11 +126,9 @@ const ProductList = () => {
     const handleSubClick = (parentKey, sub) => {
         setActiveSub(sub);
         setCurrentPage(1);
-        // Also isolate the parent group in the accordion
         setExpandedKeys({ [parentKey]: true });
     };
 
-    // Scroll handling
     const gridRef = useRef(null);
     useEffect(() => {
         if (currentPage > 1 || activeSub !== 'All') {
@@ -185,7 +164,6 @@ const ProductList = () => {
                     <aside className="product-sidebar">
                         <h3>Filter by Category</h3>
                         <nav className="sidebar-nav">
-                            {/* "All" Option */}
                             <button
                                 className={`sidebar-link ${activeSub === 'All' ? 'active' : ''}`}
                                 onClick={() => setActiveSub('All')}

@@ -16,7 +16,16 @@ export const SOCIAL_LINKS = {
 export const NAV_LINKS = [
     { name: 'Home', path: '/' },
     { name: 'About Us', path: '/about' },
-    { name: 'Products', path: '/products' },
+    {
+        name: 'Products',
+        path: '/products',
+        dropdown: [
+            { name: 'Pharmaceuticals', path: '/products/pharmaceuticals' },
+            { name: 'Nutraceuticals', path: '/products/nutraceuticals' },
+            { name: 'Cosmetics', path: '/products/cosmetics' },
+            { name: 'FMCG', path: '/products/fmcg' }
+        ]
+    },
     { name: 'Our Segments', path: '/our-segments' },
     { name: 'Contact Us', path: '/contact' }
 ];

@@ -65,6 +65,7 @@ const Footer = () => {
 
             <div className="container footer-bottom">
                 <p>&copy; {new Date().getFullYear()} Aethon Plast Pvt Ltd. All rights reserved.</p>
+                <p className="developer-credit">dev by <a href="https://semixon.com" target="_blank" rel="noopener noreferrer">@Semixon</a></p>
             </div>
         </footer >
     );

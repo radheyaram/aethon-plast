@@ -106,20 +106,17 @@
 
 .product-sidebar h3 {
     display: none;
-    /* Hide original title if we are using groups */
 }
 
 /* Hierarchical Styles */
 .sidebar-group {
     margin-bottom: 30px;
-    /* Add spacing between groups */
 }
 
 .sidebar-group-title {
     font-size: 1.1rem;
     font-weight: 700;
     color: #0F4C81;
-    /* Deep Blue Theme Color */
     text-transform: uppercase;
     margin: 0 0 12px 0;
     letter-spacing: 0.5px;
@@ -149,7 +146,6 @@
     border: none;
     text-align: left;
     padding: 8px 0 8px 15px;
-    /* Indent sub-items */
     font-size: 1rem;
     color: #555;
     cursor: pointer;

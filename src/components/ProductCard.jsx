@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import './ProductCard.css'; // We'll need to move card styles here or ensure they are global
+import './ProductCard.css';
 
 const ProductCard = ({ product }) => {
     return (
